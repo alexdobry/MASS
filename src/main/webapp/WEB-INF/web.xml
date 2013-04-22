@@ -1,0 +1,40 @@
+<web-app
+	xsi:schemaLocation='http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd'
+	version='2.4' xmlns='http://java.sun.com/xml/ns/j2ee' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+    
+	<!-- dispatcher servlet handles all incoming web requests which starts with / -->
+	 
+	<listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+	 
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/applicationContext.xml</param-value>
+    </context-param>
+    
+	 <servlet>
+	  	<servlet-name>mass</servlet-name>
+	        <servlet-class>
+	                  org.springframework.web.servlet.DispatcherServlet
+	        </servlet-class>
+	        <load-on-startup>1</load-on-startup>
+	  </servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>mass</servlet-name>
+	   	<url-pattern>/</url-pattern>
+ 	</servlet-mapping>
+ 	
+	<servlet-mapping>
+	    <servlet-name>default</servlet-name>
+	    <url-pattern>*.js</url-pattern>
+	    <url-pattern>*.css</url-pattern>
+	    <url-pattern>*.ico</url-pattern>
+	    <url-pattern>*.png</url-pattern>
+	    <url-pattern>*.jpg</url-pattern>
+	    <url-pattern>*.htc</url-pattern>
+	    <url-pattern>*.gif</url-pattern>
+	</servlet-mapping>
+ 	
+</web-app>

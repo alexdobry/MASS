@@ -1,0 +1,9 @@
+.classpath
+.idea/
+.project
+.settings/
+.springbeans
+doc/
+er_modell*
+mass.iml
+target/
