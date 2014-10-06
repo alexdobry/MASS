@@ -8,6 +8,7 @@ Das Projekt **MASS** ist im fünften Semester im Studiengang Medieninformatik an
 * mithilfe eines Message-Brokers die Angebote an die jeweiligen Abonnenten verteilt.
 
 ### Build und Deployment
+Das Projekt wird mit Maven gebaut und anschließend in einem Jetty-Webserver gestartet. Eine separate H2-Datenbank sorgt für initiale Angebote und muss ebenfalls gestartet werden.
 
 #### Datenbank Server starten
 * mvn exec:java -Dexec.classpathScope=runtime -Dexec.mainClass=org.h2.tools.Server -Dexec.args="-tcp -baseDir ./var"
